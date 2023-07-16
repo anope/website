@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign lang = site.data.ircrules[page.language] %}
+<div class="block">
+  <h3>{{ lang.title }}</h3>
+  <p>{{ lang.intro }}</p>
+  <br />
+  <ul>
+    {% for rule in lang.rules %}<li><span>{{ rule }}</span></li><br />{% endfor %}
+  </ul>
+  <div>
+    <p>&nbsp;</p>
+    <p>Language: {% for language in site.data.ircrules %}<a href="/ircrules/{{ language[0] }}.html">{{ language[1].name }}</a> {% endfor %}</p>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="block">
+  <h3>News Overview</h3>
+  <p>Currently showing all news items posted in <strong>{{ page.category }}</strong>. News items are available for these years:</p>
+  <ul>
+  {% for category in site.categories reversed %}
+    <li><a href="/news/{{ category[0] | slugify }}">{{ category[0] }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+<hr />
+{% for post in page.posts %}
+<div class="block">
+  <h3>{{ post.title }}</h3>
+  {{ post.excerpt }}
+  <h4>Posted on {{ post.date | date_to_string }} by {{ post.author }} (<a href="{{ post.url }}">Read More...</a>)</h4>
+</div>
+{% endfor %}
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153

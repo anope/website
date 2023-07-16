@@ -1,0 +1,265 @@
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 11px;
+	text-align: center;
+}
+
+a {
+	color: #003399;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	margin: 5px 3px;
+	padding: 0px 30px;
+}
+
+ul li {
+	list-style-type: square;
+	color: #888888;
+}
+
+ul li span {
+	color: #000000;
+}
+
+div#top {
+	background-color: #ffffff;
+	width: 770px;
+	height: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	padding: 0px;
+	border-width: 1px 1px 0px 1px;
+	border-color: #000000;
+	border-style: solid;
+	text-align: left;
+}
+
+div#logo {
+	background-image: url(/assets/logo.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	float: left;
+	height: 110px;
+	width: 520px;
+}
+
+div#toplinks {
+	float: right;
+	background-color: #eeeeee;
+	width: 120px;
+	text-align: right;
+}
+
+div#toplinks ul {
+	border-width: 0px 0px 0px 1px;
+	border-color: #000000;
+	border-style: solid;
+	padding: 0px;
+	margin: 0px;
+}
+
+div#toplinks li {
+	border-width: 0px 0px 1px 0px;
+	border-color: #000000;
+	border-style: solid;
+	list-style-type: none;
+	list-style-image: none;
+	padding: 1px 3px;
+	margin: 0px;
+}
+
+div#main {
+	background-color: #ffffff;
+	width: 770px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: solid;
+	text-align: left;
+}
+
+div#menu {
+	float: left;
+	width: 120px;
+}
+
+div#menu ul {
+	margin: 10px 0px;
+	padding: 7px 0px;
+	background-color: #a8bee3;
+	-moz-border-radius: 0px 7px 7px 0px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border-width: 1px 1px 1px 0px;
+	border-color: #000000;
+	border-style: solid;
+}
+
+div#menu li {
+	border-width: 0px 0px 1px 0px;
+	border-color: #000000;
+	border-style: solid;
+	background-color: #eeeeee;
+	list-style-type: none;
+	list-style-image: none;
+	padding: 1px 3px;
+	margin: 0px;
+}
+
+div#menu li.top {
+	border-width: 1px 0px;
+	list-style-type: none;
+	list-style-image: none;
+}
+
+div#menu_logos {
+	text-align: center;
+	margin: 10px;
+}
+
+div#menu_logos img {
+	margin: 5px 0px;
+	border: 0px;
+}
+
+div#contents {
+	margin: 0px 0px 0px 120px;
+	padding: 0px 10px;
+}
+
+div#footer {
+	clear: both;
+	border-width: 1px 0px 0px 0px;
+	border-color: #000000;
+	border-style: solid;
+	text-align: right;
+	font-size: 10px;
+	background-color: #8698bf;
+	color: #ffffff;
+	padding: 1px;
+}
+
+div.block {
+	margin: 10px auto;
+	border: 1px #888888 solid;
+	padding: 0px;
+}
+
+div.block h3 {
+	background-color: #a8bee3;
+	margin: 0px 0px 0px 10px;
+	padding: 1px 3px;
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+div.block h4 {
+	background-color: #eeeeee;
+	margin: 0px;
+	padding: 1px 3px;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-align: center;
+	border-width: 1px 0px 0px 0px;
+	border-color: #888888;
+	border-style: solid;
+}
+
+div.block p {
+	margin: 5px 3px;
+	padding: 2px;
+}
+
+div.advert {
+        margin: 10px auto;
+        /* border-right: 1px #888888 solid;
+        border-left: 1px #888888 solid;
+        border-bottom: 1px #888888 solid;
+        border: 0px 0px 1px 0px #888888 solid; */
+        padding: 0px;
+}
+
+ul.faq_toc li {
+	list-style-type: square;
+	color: #666666;
+}
+
+ul.faq_toc li ul {
+	margin: 2px 3px 15px 3px;
+	padding: 0px 15px;
+}
+
+ul.faq_toc li ul li {
+	list-style-type: square;
+	color: #888888;
+}
+
+ul.staff {
+	margin: 0px 5px;
+	padding: 5px;
+}
+
+ul.staff li {
+	height: 30px;
+	margin: 5px 0px;
+	padding: 2px 0px 0px 40px;
+	color: #000000;
+	list-style-type: none;
+	background-image: url(/assets/staff.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+hr {
+	height: 0px;
+	border-width: 3px 0px 0px 0px;
+	border-style: dashed;
+	border-color: #8698bf;
+}
+
+form {
+	margin: 10px;
+	paddiing: 0px;
+}
+
+input {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #8698bf;
+	padding: 1px;
+}
+
+input.long {
+	width: 300px;
+}
+
+textarea {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #8698bf;
+	padding: 1px;
+}
+
+input.button {
+	border-width: 2px;
+	border-style: outset;
+	font-weight: bold;
+}
+input.button:active {
+	border-style: inset;
+	padding-left: 2px;
+}
+

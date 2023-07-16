@@ -1,0 +1,17 @@
+<li>
+  <span>Latest {{ type }} Release:</span>
+{% if release %}
+  Anope {{ release.version }} ({{ release.date | date: "%-d %B %Y" }})
+  <br />
+  <br />
+</li>
+<a href="{{ release.news }}">News Article - Anope {{ release.version }} Release</a>
+<br />
+<a href="{{ release.source }}">File Download - Anope {{ release.version }} Source</a>
+<br />
+<a href="{{ release.windows }}">File Download - Anope {{ release.version }} Windows Installer</a>
+{% else %}
+n/a
+</li>
+{% endif %}
+<br />

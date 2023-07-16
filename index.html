@@ -1,0 +1,42 @@
+---
+layout: default
+redirect_from:
+- /index.php/
+- /news.php/
+- /news_index.php/
+---
+<div class="block">
+  <h3>Anope IRC Services</h3>
+  <p>Anope is a set of IRC Services designed for flexibility and ease of use.</p>
+  <p>Anope is available in two flavors: Stable and Development. The stable version has been tested for months and is as stable as a rock, while the development version gets new features added constantly and allows you to enjoy the future of services today. </p>
+  <br />
+  <ul>
+    {% assign type = "Development" %}
+    {% assign release = site.releases.devel %}
+    {% include release.html %}
+
+    {% assign type = "Stable" %}
+    {% assign release = site.releases.stable %}
+    {% include release.html %}
+
+    <br />
+    <li>
+      <span>Old releases available <a href="https://github.com/anope/anope/releases">here</a>.</span>
+    </li>
+  </ul>
+  <br />
+</div>
+<div class="block">
+  {% assign latest = site.posts[0] %}
+  <h3>Latest News - <a href="{{ latest.url }}">{{ latest.title }}</a></h3>
+  {{ latest.content }}
+  <h4>Posted on {{ latest.date | date_to_string }} by {{ latest.author }}</h4>
+</div>
+<div class="block">
+  <h3>Other News</h3>
+  <ul id="lastnews">
+    {% for post in site.posts offset:1 limit:5 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})
+    {% endfor %}
+</ul>
+</div>

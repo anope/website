@@ -1,0 +1,43 @@
+name: Build website
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 3.2
+
+      - name: Build website
+        run: |-
+          bundle exec jekyll build
+
+      - name: Upload GitHub artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./_site
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v2
+
+      - name: Deploy site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

@@ -1,0 +1,40 @@
+category_layout: news.html
+category_path: /news/
+excerpt_separator: <!--more-->
+paginate: 9999 # we dont use this but the category pages ext does
+permalink: /news/:year/:title:output_ext
+
+navigation:
+    - Home: /
+      About: /about.html
+      News: /news
+      Downloads: https://github.com/anope/anope/releases
+      Team: /team.html
+      Contact: /contact.html
+
+    - Forum: https://forum.anope.org
+      Modules: https://modules.anope.org
+      Wiki: https://wiki.anope.org
+      FAQ: https://wiki.anope.org/index.php/2.0/FAQ
+      Bug Tracker: https://github.com/anope/anope/issues
+      Feature Requests: https://forum.anope.org/?board=9.0
+      Paste Bin: https://pastebin.anope.org
+
+    - GitWeb: https://github.com/anope/anope
+      Development API: '#'
+
+plugins:
+- jekyll-category-pages
+- jekyll-feed
+- jekyll-paginate
+- jekyll-redirect-from
+- jekyll-sitemap
+
+releases:
+  devel: null
+  stable:
+    version: 2.0.13
+    date: 2023-06-01
+    news: /news/2023/anope-2013-release.html
+    source: https://github.com/anope/anope/archive/refs/tags/2.0.13.tar.gz
+    windows: https://github.com/anope/anope/releases/download/2.0.13/anope-2.0.13.exe

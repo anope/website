@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}Anope IRC Services</title>
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/assets/anope.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="anope, irc, services, ircd, wiki, forum, support, modules, download, linux, unix, windows, conf, services.conf, link, uline, install, setup, configure, nickserv, chanserv, memoserv, hostserv, botserv, operserv, git, svn, unreal, unrealircd, ultimate, inspircd, viagraircd, shadowircd, bahamut, hybrid, dreamforge, ratbox, solidircd, encryption, md5, mysql" />
+  <meta name="description" content="Anope is a set of IRC Services designed for flexibility and ease of use. Anope supports over 15 major IRCds, and uses flatfile or MySQL Databases to store information." />
+  <meta name="author" content="The Anope Team" />
+  <meta name="robots" content="all" />
+</head>
+<body>
+  <div id="top">
+    <div id="logo">&nbsp;</div>
+    <div id="toplinks">
+      <ul>
+        <li><a href="https://login.anope.org">Login / Register</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="main">
+    <div id="menu">
+      {% for section in site.navigation %}
+        <ul>
+        {% for link in section %}
+          <li class="{% if forloop.first %}top{% endif %}"><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+    <div id="contents">

@@ -1,0 +1,50 @@
+en:
+  name: "English"
+  title: "Rules for #anope"
+  intro: "Our support channel is #anope at irc.anope.org. This channel has a few rules to speed things up and keep everyone happy. "
+  rules:
+    - "We are VOLUNTEERS - We do not have to help you, we do it because we are nice."
+    - 'Ask concrete questions. No need for "may I ask a question?", "is someone in here??" or "I need help!!!!11". <b>Just ask</b>. In your interest: ask questions the smart way.'
+    - "This is #anope. We do <b>NOT</b> answer unrelated questions (e.g. IRCd, Stats, OS, Misc. issues)"
+    - "Do not PM without permission. Questions are to be asked in the channel."
+    - 'Do not paste! Use a pastebin instead. <a href="https://pastebin.anope.org">https://pastebin.anope.org/</a>'
+    - 'Read the bundled documentation and <a href="https://wiki.anope.org/index.php/2.0/FAQ">FAQ</a>; These documents contain most answers. Help yourself!'
+    - '#Anope is English, try /list #anope* to see if there is a channel for your language otherwise post on our <a href="https://forum.anope.org">forums</a>.'
+    - "RAW is evil. Do <b>NOT</b> use it and do <b>NOT</b> ask questions about raw, you will be banned. Yes, really."
+    - "Be nice. We all like a bit of off topic chat but if someone is getting help, have the respect to shut up."
+    - "No announcers, greeters, or annoying scripts/plugins/etc. They are pointless and you will be banned for them."
+    - "The op is always right, and it isn&apos;t up for debate."
+
+de:
+  name: "German"
+  title: "Regeln für #anope"
+  intro: "Unser Support Channel ist #anope auf irc.anope.org. In diesen Channel gelten ein paar Regeln, um die Gespräche zu beschleunigen und jeden zufriedenzustellen."
+  rules:
+    - "Wir sind hier alles Freiwillige - Wir müssen Dir nicht helfen, aber wir tun es gerne, weil wir einfach nett sind."
+    - "Stelle konkrete Fragen. Es ist nicht nötig zu fragen ob du fragen darfst, ob jemand da ist oder lautstark kund zu tun, daß du Hilfe benötigst. Stelle deine Fragen möglichst präzise. Dies ist auch in deinem eigenen Interesse weil wir dir so schneller helfen können."
+    - "Dies ist der Supportchat zu Anope. Wir beantworten keine Fragen die nichts mit dem Thema zu tun haben. Also z.B. (IRCd, Statistiken, Betriebssystem, usw.)"
+    - "Schreibe keine privaten Nachrichten ohne Erlaubnis. Fragen werden im Channel gestellt."
+    - 'Der Channel ist keine Zwischenablage. Wenn du uns etwas zeigen willst, nutze pastebin und poste dann den link im channel. <a href="https://pastebin.anope.org">https://pastebin.anope.org/</a>'
+    - 'Bevor du deine Frage im Chat stellst, lies Dir die mitgelieferte Dokumentation und die FAQ genau durch. <a href="https://wiki.anope.org/index.php/2.0/FAQ">FAQ</a>; Diese Dokumente beantworten bereits die meisten Fragen.'
+    - 'In #Anope wird Englisch gesprochen, versuch /list #anope* um zu sehen ob ein Supportchan für Anope in Deiner Sprache existiert, ansonsten poste auf unserem <a href="https://forum.anope.org">Forum</a>.'
+    - "RAW ist Tabu. Verwende es <b>NICHT</b> und stell <b>KEINE</b> Fragen über RAW, Du wirst dafür gebannt. Ja, wirklich."
+    - "Sei nett zu anderen. Kein Fluchen, keine persönlichen Angriffe auf andere Nutzer, keine Flame Wars, kein rumgetrolle, usw."
+    - "Automatische Ankündigungs- sowie Begrüßungs-scripts, sowie nervende scripts/plugins/usw. sind abzuschalten. Sie tragen nichts zum Thema bei und Du wirst gebannt dafür."
+    - "Den Anweisungen der Ops ist folge zu leisten und nicht darüber zu debattieren."
+
+nl:
+  name: "Dutch"
+  title: "Rules for #anope"
+  intro: "Ons hulp kanaal is #anope op irc.anope.org. Dit kanaal heeft een paar regels om t allemaal te versnellen en iedereen tevreden te houden."
+  rules:
+    - "Wij zijn VRIJWILLIGERS - We hoeven je niet te helpen,we doen het omdat we aardig zijn."
+    - 'Stel een concrete vraag. Het is niet nodig om te vragen "mag ik een vraag stellen", "is er iemand hier" of "Ik heb hulp nodig!. Vraag het gewoon.  In jou belang: Stel vragen op de slimme manier.'
+    - "Dit is #anope. Wij geven GEEN antwoord op ongerelateerde vragen (bv IRCd, Stats, OS, en andere verschillende zaken)"
+    - "GEEN pm zonder toestemming. Vragen horen in het kanaal gesteld te worden."
+    - 'NIET pasten in het kanaal. Gebruik pastebins hiervoor. <a href="https://pastebin.anope.org">https://pastebin.anope.org/</a>'
+    - 'Lees de gebundelde documentatie en <a href="https://wiki.anope.org/index.php/2.0/FAQ">FAQ</a> Deze documenten bevatten de meeste antwoorden. Help jezelf!'
+    - '#anope is Engels, probeer /list #anope* of er een kanaal in jou taal is post anders je vraag op onze <a href="https://forum.anope.org">forums</a>.'
+    - "RAW is het kwaad. Gebruik het NIET en stel GEEN vraag over RAW. Je word hiervoor gebanned. Ja echt."
+    - "Wees beleefd. We houden allemaal van een beetje offtopic chat maar als iemand hulp krijgt, heb dan het respect om stil te zijn."
+    - "Geen geautomatiseerde omroepers, begroeters, of vervelende scripts / plugins / etc. Ze zijn even zinloos en nutteloos."
+    - "De OP heeft altijd gelijk, en dat staat niet ter discussie"
