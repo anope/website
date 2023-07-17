@@ -7,7 +7,7 @@ permalink: /news/:year/:title:output_ext
 navigation:
     - Home: /
       About: /about.html
-      News: /news
+      News: /news/
       Downloads: https://github.com/anope/anope/releases
       Team: /team.html
       Contact: /contact.html
