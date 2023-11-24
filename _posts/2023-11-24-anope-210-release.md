@@ -33,7 +33,7 @@ The notable changes include:
 - Replaced uplink:ipv6 with uplink:protocol.
 - Updated all references to IRCServices to refer to Anope instead.
 
-Users who want to test out new features are encouraged to upgrade.
+Users who want to test out new features are encouraged to upgrade. Before upgrading you may wish to take a backup of your databases and read the [upgrading guide](/upgrading.html). If you encounter any incompatibilities that aren't mentioned on this page then [please open an issue](https://github.com/anope/website/issues/new).
 
 SHA256 Sum: fd46d7cf740deae4557c2e9fd69c791f51a2f00c15659a6d4ea3a0057bfd796b [anope-2.1.0.tar.gz](https://github.com/anope/anope/archive/refs/tags/2.1.0.tar.gz)
 \
