@@ -30,7 +30,7 @@ redirect_from:
 <div class="block">
   {% assign latest = site.posts[0] %}
   <h3>Latest News - <a href="{{ latest.url }}">{{ latest.title }}</a></h3>
-  {{ latest.content }}
+  {{ latest.excerpt }}
   <h4>Posted on {{ latest.date | date_to_string }} by {{ latest.author }}</h4>
 </div>
 <div class="block">
