@@ -13,7 +13,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Rename `services.conf` to `anope.conf`.
 
-0. Replace `uplink:ipv6` with `uplink:protocol` ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L172-L176).
+0. Replace `uplink:ipv6` with `uplink:protocol` ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L172-L176)).
 
 0. If you are using the `inspircd3` protocol module then replace it with the `inspircd` module.
 
