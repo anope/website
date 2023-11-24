@@ -31,7 +31,12 @@ plugins:
 - jekyll-sitemap
 
 releases:
-  devel: null
+  devel:
+    version: 2.1.0
+    date: 2023-10-24
+    news: /news/2023/anope-210-release.html
+    source: https://github.com/anope/anope/archive/refs/tags/2.1.0.tar.gz
+    windows: https://github.com/anope/anope/releases/download/2.1.0/anope-2.1.0.exe
   stable:
     version: 2.0.14
     date: 2023-08-06
