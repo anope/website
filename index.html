@@ -12,14 +12,13 @@ redirect_from:
   <p>Anope is available in two flavors: Stable and Development. The stable version has been tested for months and is as stable as a rock, while the development version gets new features added constantly and allows you to enjoy the future of services today. </p>
   <br>
   <ul>
-    {% assign type = "Development" %}
-    {% assign release = site.releases.devel %}
-    {% include release.html %}
-
     {% assign type = "Stable" %}
     {% assign release = site.releases.stable %}
     {% include release.html %}
 
+    {% assign type = "Development" %}
+    {% assign release = site.releases.devel %}
+    {% include release.html %}
     <br>
     <li>
       <span>Old releases available <a href="https://github.com/anope/anope/releases">here</a>.</span>
