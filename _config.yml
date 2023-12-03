@@ -20,8 +20,8 @@ navigation:
       Feature Requests: https://forum.anope.org/?board=9.0
       Paste Bin: https://pastebin.anope.org
 
-    - GitWeb: https://github.com/anope/anope
-      Development API: '#'
+    - GitHub: https://github.com/anope/anope
+      Docker: https://hub.docker.com/r/anope/anope
 
 plugins:
 - jekyll-category-pages
