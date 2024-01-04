@@ -37,4 +37,4 @@ Users who want to test out new features are encouraged to upgrade. Before upgrad
 
 SHA256 Sum: fd46d7cf740deae4557c2e9fd69c791f51a2f00c15659a6d4ea3a0057bfd796b [anope-2.1.0.tar.gz](https://github.com/anope/anope/archive/refs/tags/2.1.0.tar.gz)
 \
-SHA256 Sum: f91e4b6a385abfe687baa48946c45d49900450a731a8a59d6ad00d88df40575e [anope-2.1.0.exe](https://github.com/anope/anope/releases/download/2.0.14/anope-2.1.0.exe)
+SHA256 Sum: f91e4b6a385abfe687baa48946c45d49900450a731a8a59d6ad00d88df40575e [anope-2.1.0.exe](https://github.com/anope/anope/releases/download/2.1.0/anope-2.1.0.exe)
