@@ -18,7 +18,6 @@ The following translations are extremely outdated and will be removed in a futur
 The following translations are somewhat outdated and just need to have some messages updated:
 
 - Dutch (nl_NL)
-- French (fr_FR)
 - Greek (el_GR)
 - Spanish (es_ES)
 
