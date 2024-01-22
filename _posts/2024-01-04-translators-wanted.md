@@ -13,13 +13,13 @@ The following translations are extremely outdated and will be removed in a futur
 - Hungarian (hu_HU)
 - Portuguese (pt_PT)
 - Russian (ru_RU)
-- Turkish (tr_TR)
 
 The following translations are somewhat outdated and just need to have some messages updated:
 
 - Dutch (nl_NL)
 - Greek (el_GR)
 - Spanish (es_ES)
+- Turkish (tr_TR)
 
 If you want to translate Anope to a language which it is not currently translated to then your contribution would also be welcome.
 
