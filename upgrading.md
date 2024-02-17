@@ -35,20 +35,34 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
 
+#### chanstats.conf
+
+0. Remove the `m_` prefix from the `chanstats` module.
+
 #### nickserv.conf
-
-0. Replace `nickserv:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
-
-0. Rename `nickserv:passlen` to `nickserv:maxpasslen`.
-
-0. Remove the `ns_getpass` module and `nickserv/getpass` command.
 
 0. Add the `nickserv/set/neverop` and `nickserv/saset/neverop` commands ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L581-L582])).
 
+0. Remove the `ns_getpass` module and `nickserv/getpass` command.
+
+0. Rename `nickserv:passlen` to `nickserv:maxpasslen`.
+
+0. Replace `nickserv:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
+
 #### modules.conf
 
-0. If enabled replace the `m_regex_pcre` module with the `m_regex_pcre2` module.
+0. If enabled add `module:tlsv10`, `module:tlsv11`, and `module:tlsv12` to the `ssl_openssl` module ([example](https://github.com/anope/anope/blob/2.1.2/data/modules.example.conf#L632-L639)).
+
+0. If enabled remove the `module:sslv3` from the `ssl_openssl` module (now always disabled).
+
+0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sasl`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, `ssl_openssl`, `xmlrpc`, and `xmlrpc_main` modules.
+
+0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
 
 #### operserv.conf
 
 0. Remove the `os_oline` module and `operserv/oline` command.
+
+#### stats.standalone.conf
+
+0. Remove the `m_` prefix from the `mysql` module.
