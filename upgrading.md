@@ -25,6 +25,16 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Move the `enc_md5`, `enc_none` and `enc_sha1` modules to be secondary encryption modules and add `enc_bcrypt` or `enc_sha256` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L1219-L1256)).
 
+#### botserv.conf
+
+0. Add a description to the `GREET` privilege ([example](https://github.com/anope/anope/blob/2.1.1/data/botserv.example.conf#L326)).
+
+#### chanserv.conf
+
+0. Add a description to the `ACCESS_CHANGE`, `ACCESS_LIST`, `AKICK`, `ASSIGN`, `AUTOHALFOP`, `AUTOOP`, `AUTOOWNER`, `AUTOPROTECT`, `AUTOVOICE`, `BADWORDS`, `BAN`, `FANTASIA`, `FOUNDER`, `GETKEY`, `HALFOP`, `HALFOPME`, `INFO`, `INVITE`, `KICK`, `MEMO`, `MODE`, `NOKICK`, `OP`, `OPME`, `OWNER`, `OWNERME`, `PROTECT`, `PROTECTME`, `SAY`, `SET`, `SIGNKICK`, `TOPIC`, `UNBAN`, `UNBANME`, `VOICE`, and `VOICEME` privileges ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L209-L842)).
+
+0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
+
 #### nickserv.conf
 
 0. Replace `nickserv:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
@@ -34,6 +44,10 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Remove the `ns_getpass` module and `nickserv/getpass` command.
 
 0. Add the `nickserv/set/neverop` and `nickserv/saset/neverop` commands ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L581-L582])).
+
+#### modules.conf
+
+0. If enabled replace the `m_regex_pcre` module with the `m_regex_pcre2` module.
 
 #### operserv.conf
 
