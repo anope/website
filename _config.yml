@@ -39,8 +39,8 @@ releases:
     source: https://github.com/anope/anope/archive/refs/tags/2.1.2.tar.gz
     windows: https://github.com/anope/anope/releases/download/2.1.2/anope-2.1.1.exe
   stable:
-    version: 2.0.14
-    date: 2023-08-06
-    news: /news/2023/anope-2014-release.html
-    source: https://github.com/anope/anope/archive/refs/tags/2.0.14.tar.gz
-    windows: https://github.com/anope/anope/releases/download/2.0.14/anope-2.0.14.exe
+    version: 2.0.15
+    date: 2024-02-17
+    news: /news/2024/anope-2015-release.html
+    source: https://github.com/anope/anope/archive/refs/tags/2.0.15.tar.gz
+    windows: https://github.com/anope/anope/releases/download/2.0.15/anope-2.0.15.exe
