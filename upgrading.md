@@ -15,6 +15,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Replace `uplink:ipv6` with `uplink:protocol` ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L172-L176)).
 
+0. If you are using the `charybdis` protocol module then migrate to [Solanum](https://github.com/solanum-ircd/solanum) and replace it with the `solanum` module.
+
 0. If you are using the `inspircd3` protocol module then replace it with the `inspircd` module.
 
 0. If you are using the `inspircd12` or `inspircd20` protocol modules then upgrade your IRCd and replace it with the `inspircd` module.
