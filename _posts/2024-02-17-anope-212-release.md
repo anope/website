@@ -10,8 +10,8 @@ Anope 2.1.2 has been released, which is the third release on our new development
 The notable changes include:
 
 - Added module:tlsv10 to m_ssl_openssl for configuring whether TLSv1.0 is usable (defaults to no).
-- Added module:tlsv11 to m_ssl_openssl for configuring whether TLSv1.0 is usable (defaults to yes).
-- Added module:tlsv12 to m_ssl_openssl for configuring whether TLSv1.0 is usable (defaults to yes)
+- Added module:tlsv11 to m_ssl_openssl for configuring whether TLSv1.1 is usable (defaults to yes).
+- Added module:tlsv12 to m_ssl_openssl for configuring whether TLSv1.2 is usable (defaults to yes)
 - Bumped the minimum OpenSSL version to 1.1.0.
 - Bumped the minumum GnuTLS version to 3.0.0.
 - Modernized mutex and thread code to use Modern C++.
