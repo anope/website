@@ -27,6 +27,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Move the `enc_md5`, `enc_none` and `enc_sha1` modules to be secondary encryption modules and add `enc_bcrypt` or `enc_sha256` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L1219-L1256)).
 
+0. Replace the `nickserv/access` privilege in operator accounts with the `nickserv/cert` privilege.
+
 #### botserv.conf
 
 0. Add a description to the `GREET` privilege ([example](https://github.com/anope/anope/blob/2.1.1/data/botserv.example.conf#L326)).
@@ -37,6 +39,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
 
+0. Remove the `cs_secure` option from `module:defaults` for the `chanserv` module.
+
 #### chanstats.conf
 
 0. Remove the `m_` prefix from the `chanstats` module.
@@ -45,7 +49,15 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Add the `nickserv/set/neverop` and `nickserv/saset/neverop` commands ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L581-L582])).
 
+0. Remove the `nickserv/set/secure` and `nickserv/saset/secure` commands.
+
+0. Remove the `ns_access` module and `nickserv/access` command.
+
 0. Remove the `ns_getpass` module and `nickserv/getpass` command.
+
+0. Remove the `ns_status` module and `nickserv/status` command.
+
+0. Remove the `ns_secure` option from `module:defaults` for the `nickserv` module.
 
 0. Rename `nickserv:passlen` to `nickserv:maxpasslen`.
 
