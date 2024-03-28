@@ -4,6 +4,9 @@ excerpt_separator: <!--more-->
 paginate: 9999 # we dont use this but the category pages ext does
 permalink: /news/:year/:title:output_ext
 
+exclude:
+  - README.md
+
 navigation:
     - Home: /
       About: /about.html
