@@ -25,9 +25,17 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using the `unreal` protocol module then upgrade your IRCd and replace it with the `unrealircd` module.
 
-0. Move the `enc_md5`, `enc_none` and `enc_sha1` modules to be secondary encryption modules and add `enc_bcrypt` or `enc_sha256` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L1219-L1256)).
+0. Move the `enc_md5`, `enc_none`, `enc_sha1`, and `enc_sha256` modules to be secondary encryption modules and add `enc_argon2`, `enc_bcrypt`, or `enc_sha2` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L1228-L1345)).
 
 0. Replace the `nickserv/access` privilege in operator accounts with the `nickserv/cert` privilege.
+
+0. Add the `global/queue` and `global/server` privileges to operator accounts with the `global/global` privilege.
+
+0. Update `serverinfo:motd` to be relative to the config directory.
+
+0. Update `serverinfo:pid` to be relative to the data directory.
+
+0. If you are using email then add the `i` flag to the sendmail command ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
 
 #### botserv.conf
 
@@ -40,6 +48,10 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
 
 0. Remove the `cs_secure` option from `module:defaults` for the `chanserv` module.
+
+#### global.conf
+
+0. Add the `gl_queue` and `gl_server` modules and their commands ([example](https://github.com/anope/anope/blob/2.1.4/data/global.example.conf#L117-L141)).
 
 #### chanstats.conf
 
@@ -61,7 +73,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Rename `nickserv:passlen` to `nickserv:maxpasslen`.
 
-0. Replace `nickserv:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
+0. Replace `options:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
 
 #### modules.conf
 
@@ -72,6 +84,12 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sasl`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, `ssl_openssl`, `xmlrpc`, and `xmlrpc_main` modules.
 
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
+
+0. If enabled update `module:cert`, `module:dhparams`, and `module:key` for the `ssl_gnutls` module to be relative to the config directory.
+
+0. If enabled update `module:cert` and `module:key` for the `ssl_openssl` module to be relative to the config directory.
+
+0. If enable replace `module:template` replace for the `webcpanel` module with `module:template_dir` ([example](https://github.com/anope/anope/blob/2.1.4/data/modules.example.conf#L777-L781)).
 
 #### operserv.conf
 
