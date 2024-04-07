@@ -37,7 +37,7 @@ plugins:
 releases:
   devel:
     version: 2.1.4
-    date: 2023-04-01
+    date: 2024-04-01
     news: /news/2024/anope-214-release.html
     source: https://github.com/anope/anope/archive/refs/tags/2.1.4.tar.gz
     windows: https://github.com/anope/anope/releases/download/2.1.4/anope-2.1.4.exe
