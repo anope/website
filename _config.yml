@@ -46,4 +46,4 @@ releases:
     date: 2024-02-17
     news: /news/2024/anope-2015-release.html
     source: https://github.com/anope/anope/archive/refs/tags/2.0.15.tar.gz
-    windows: https://github.com/anope/anope/releases/download/2.0.15/anope-2.0.15.exe
+    windows: https://github.com/anope/anope/releases/download/2.0.15/anope-2.0.15r2.exe
