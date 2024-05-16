@@ -9,6 +9,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Update any scripts you have that execute `services` to execute `anope` instead.
 
+0. If you are using the `db_sql` or `db_sql_live` modules it is recommended that on 2.0 you load `db_flatfile` and export your database to a file and re-import on 2.1 to update the schema of your database.
+
 #### services.conf
 
 0. Rename `services.conf` to `anope.conf`.
