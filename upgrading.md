@@ -39,17 +39,23 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using email then add the `i` flag to the sendmail command ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
 
+0. Update `options:language` to no longer include `ca_ES.UTF-8`, `hu_HU.UTF-8`, and `ru_RU.UTF-8`
+
 #### botserv.conf
 
 0. Add a description to the `GREET` privilege ([example](https://github.com/anope/anope/blob/2.1.1/data/botserv.example.conf#L326)).
 
 #### chanserv.conf
 
-0. Add a description to the `ACCESS_CHANGE`, `ACCESS_LIST`, `AKICK`, `ASSIGN`, `AUTOHALFOP`, `AUTOOP`, `AUTOOWNER`, `AUTOPROTECT`, `AUTOVOICE`, `BADWORDS`, `BAN`, `FANTASIA`, `FOUNDER`, `GETKEY`, `HALFOP`, `HALFOPME`, `INFO`, `INVITE`, `KICK`, `MEMO`, `MODE`, `NOKICK`, `OP`, `OPME`, `OWNER`, `OWNERME`, `PROTECT`, `PROTECTME`, `SAY`, `SET`, `SIGNKICK`, `TOPIC`, `UNBAN`, `UNBANME`, `VOICE`, and `VOICEME` privileges ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L209-L842)).
+0. Rename the `FANTASIA` privilege to `FANTASY` ([example](https://github.com/anope/anope/blob/2.1.7/data/chanserv.example.conf#L393-L408)).
+
+0. Add a description to the `ACCESS_CHANGE`, `ACCESS_LIST`, `AKICK`, `ASSIGN`, `AUTOHALFOP`, `AUTOOP`, `AUTOOWNER`, `AUTOPROTECT`, `AUTOVOICE`, `BADWORDS`, `BAN`, `FANTASY`, `FOUNDER`, `GETKEY`, `HALFOP`, `HALFOPME`, `INFO`, `INVITE`, `KICK`, `MEMO`, `MODE`, `NOKICK`, `OP`, `OPME`, `OWNER`, `OWNERME`, `PROTECT`, `PROTECTME`, `SAY`, `SET`, `SIGNKICK`, `TOPIC`, `UNBAN`, `UNBANME`, `VOICE`, and `VOICEME` privileges ([example](https://github.com/anope/anope/blob/2.1.7/data/chanserv.example.conf#L206-L839)).
 
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
 
 0. Remove the `cs_secure` option from `module:defaults` for the `chanserv` module.
+
+0. Rename `module:expire` for the `cs_suspend` module to `suspendexpire`.
 
 #### global.conf
 
@@ -66,7 +72,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Remove the `nickserv/set/secure` and `nickserv/saset/secure` commands.
 
 0. Remove the `ns_access` module and `nickserv/access` command.
-
+.
 0. Remove the `ns_getpass` module and `nickserv/getpass` command.
 
 0. Remove the `ns_status` module and `nickserv/status` command.
@@ -76,6 +82,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Rename `nickserv:passlen` to `nickserv:maxpasslen`.
 
 0. Replace `options:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
+
+0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1/data/nickserv.example.conf#L555-L564)).
 
 #### modules.conf
 
