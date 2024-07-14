@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Anope 2.1.6 Release
+title: Anope 2.1.7 Release
 author: Sadie
 category: 2024
 ---
