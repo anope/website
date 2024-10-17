@@ -8,7 +8,7 @@ We can be contacted in a number of different ways. If you need support you can u
 
 - **IRC (English)** &mdash; [irc.teranova.net #anope](ircs://irc.teranova.net/#anope)
 - **IRC (German)** &mdash; [irc.teranova.net #anope.de](ircs://irc.teranova.net/#anope.de)
-- **Forum** &mdash; [forum.anope.org](https://forum.anope.org/)
+- **Forum** &mdash; [GitHub Discussions](https://github.com/orgs/anope/discussions)
 
 Bugs can be reported on our [bug tracker](https://github.com/anope/anope/issues).
 

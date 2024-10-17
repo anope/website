@@ -15,12 +15,11 @@ navigation:
       Team: /team.html
       Contact: /contact.html
 
-    - Forum: https://forum.anope.org
+    - Forum: https://github.com/orgs/anope/discussions
       Modules: https://modules.anope.org
       Wiki: https://wiki.anope.org
       FAQ: https://wiki.anope.org/index.php/2.0/FAQ
       Bug Tracker: https://github.com/anope/anope/issues
-      Feature Requests: https://forum.anope.org/?board=9.0
       Paste Bin: https://pastebin.anope.org
 
     - Docker Hub: https://hub.docker.com/r/anope/anope
