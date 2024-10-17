@@ -6,7 +6,8 @@ redirect_from: /contact.php/
 
 We can be contacted in a number of different ways. If you need support you can use any of the following ways to reach people who want to help you:
 
-- **IRC** &mdash; [irc.anope.org #anope](ircs://irc.anope.org/#anope)
+- **IRC (English)** &mdash; [irc.teranova.net #anope](ircs://irc.teranova.net/#anope)
+- **IRC (German)** &mdash; [irc.teranova.net #anope.de](ircs://irc.teranova.net/#anope.de)
 - **Forum** &mdash; [forum.anope.org](https://forum.anope.org/)
 
 Bugs can be reported on our [bug tracker](https://github.com/anope/anope/issues).

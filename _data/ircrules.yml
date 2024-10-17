@@ -1,7 +1,7 @@
 en:
   name: "English"
   title: "Rules for #anope"
-  intro: "Our support channel is #anope at irc.anope.org. This channel has a few rules to speed things up and keep everyone happy. "
+  intro: "Our support channel is #anope at irc.teranova.net. This channel has a few rules to speed things up and keep everyone happy. "
   rules:
     - "We are VOLUNTEERS - We do not have to help you, we do it because we are nice."
     - 'Ask concrete questions. No need for "may I ask a question?", "is someone in here??" or "I need help!!!!11". <b>Just ask</b>. In your interest: ask questions the smart way.'
@@ -18,7 +18,7 @@ en:
 de:
   name: "German"
   title: "Regeln für #anope"
-  intro: "Unser Support Channel ist #anope auf irc.anope.org. In diesen Channel gelten ein paar Regeln, um die Gespräche zu beschleunigen und jeden zufriedenzustellen."
+  intro: "Unser Support Channel ist #anope auf irc.teranova.net. In diesen Channel gelten ein paar Regeln, um die Gespräche zu beschleunigen und jeden zufriedenzustellen."
   rules:
     - "Wir sind hier alles Freiwillige - Wir müssen Dir nicht helfen, aber wir tun es gerne, weil wir einfach nett sind."
     - "Stelle konkrete Fragen. Es ist nicht nötig zu fragen ob du fragen darfst, ob jemand da ist oder lautstark kund zu tun, daß du Hilfe benötigst. Stelle deine Fragen möglichst präzise. Dies ist auch in deinem eigenen Interesse weil wir dir so schneller helfen können."
@@ -35,7 +35,7 @@ de:
 nl:
   name: "Dutch"
   title: "Rules for #anope"
-  intro: "Ons hulp kanaal is #anope op irc.anope.org. Dit kanaal heeft een paar regels om t allemaal te versnellen en iedereen tevreden te houden."
+  intro: "Ons hulp kanaal is #anope op irc.teranova.net. Dit kanaal heeft een paar regels om t allemaal te versnellen en iedereen tevreden te houden."
   rules:
     - "Wij zijn VRIJWILLIGERS - We hoeven je niet te helpen,we doen het omdat we aardig zijn."
     - 'Stel een concrete vraag. Het is niet nodig om te vragen "mag ik een vraag stellen", "is er iemand hier" of "Ik heb hulp nodig!. Vraag het gewoon.  In jou belang: Stel vragen op de slimme manier.'
