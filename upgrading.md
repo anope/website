@@ -39,7 +39,9 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using email then add the `i` flag to the sendmail command ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
 
-0. Update `options:language` to no longer include `ca_ES.UTF-8`, `hu_HU.UTF-8`, and `ru_RU.UTF-8`
+0. Replace `options:usestrictprivmsg` with `options:servicealias` ([example](https://github.com/anope/anope/blob/2.1.10/data/anope.example.conf#L432-L437)).
+
+0. Update `options:languages` to no longer include `ca_ES.UTF-8`, `hu_HU.UTF-8`, and `ru_RU.UTF-8`.
 
 #### botserv.conf
 
@@ -84,6 +86,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Replace `options:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
 
 0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1/data/nickserv.example.conf#L555-L564)).
+
+0. If `options:useprivmsg` was enabled load the `ns_set_message` module ([example](https://github.com/anope/anope/blob/2.1.10/data/nickserv.example.conf#L578-L591)).
 
 #### modules.conf
 
