@@ -55,11 +55,11 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
 
-0. Remove the `cs_secure` option from `defaults` from the `chanserv` module.
+0. Remove the `cs_secure` option from `{chanserv}:defaults`.
 
 0. Add the `misc_numeric` field to the `SET URL` command of the `ns_set_misc` module ([example](https://github.com/anope/anope/blob/2.1.11/data/chanserv.example.conf#L1259])).
 
-0. Rename `expire` on the `cs_suspend` module to `suspendexpire`.
+0. Rename `{cs_suspend}:expire` to `{cs_suspend}:suspendexpire`.
 
 #### global.conf
 
@@ -81,13 +81,13 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Remove the `ns_status` module and `nickserv/status` command.
 
-0. Remove the `ns_secure` option from `defaults` on the `nickserv` module.
+0. Remove the `ns_secure` option from `{nickserv}:defaults`.
 
-0. Rename `passlen` on the `nickserv` module to `maxpasslen`.
+0. Rename `{nickserv}:passlen` to `{nickserv}:maxpasslen`.
 
-0. Replace `guestnickprefix` on the `nickserv` module with `guestnick` ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L205-L216)).
+0. Replace `{nickserv}:guestnickprefix` with `{nickserv}:guestnick` ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L205-L216)).
 
-0. Replace `options:strictpasswords` with `nickserv:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
+0. Replace `options:strictpasswords` with `{nickserv}:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
 
 0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L579-L588)).
 
@@ -97,19 +97,19 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 #### modules.conf
 
-0. If enabled add `tlsv10`, `tlsv11`, and `tlsv12` to the `ssl_openssl` module ([example](https://github.com/anope/anope/blob/2.1.2/data/modules.example.conf#L632-L639)).
+0. If enabled add `{ssl_openssl}:tlsv10`, `{ssl_openssl}:tlsv11`, and `{ssl_openssl}:tlsv12` ([example](https://github.com/anope/anope/blob/2.1.2/data/modules.example.conf#L632-L639)).
 
-0. If enabled remove `sslv3` from the `ssl_openssl` module (now always disabled).
+0. If enabled remove `{ssl_openssl}:sslv3` (now always disabled).
 
 0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sasl`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, `ssl_openssl`, `xmlrpc`, and `xmlrpc_main` modules.
 
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
 
-0. If enabled update `cert`, `dhparams`, and `key` on the `ssl_gnutls` module to be relative to the config directory.
+0. If enabled update `{ssl_gnutls}:cert`, `{ssl_gnutls}:dhparams`, and `{ssl_gnutls}:key` to be relative to the config directory.
 
-0. If enabled update `cert` and `key` on the `ssl_openssl` module to be relative to the config directory.
+0. If enabled update `{ssl_openssl}:cert` and `{ssl_openssl}:key` to be relative to the config directory.
 
-0. If enable replace `template` on the `webcpanel` module with `template_dir` ([example](https://github.com/anope/anope/blob/2.1.4/data/modules.example.conf#L777-L781)).
+0. If enable replace `{webcpanel}:template` with `{webcpanel}:template_dir` ([example](https://github.com/anope/anope/blob/2.1.4/data/modules.example.conf#L777-L781)).
 
 #### operserv.conf
 
