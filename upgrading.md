@@ -89,9 +89,12 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Replace `options:strictpasswords` with `{nickserv}:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
 
-0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L579-L588)).
-
 0. Load the `ns_set_kill` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L557-L574)).
+
+0. Load the `ns_set_keepmodes` module ([example](https://github.com/anope/anope/blob/2.1.12/data/nickserv.example.conf#L557-L576)).
+
+
+0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L579-L588)).
 
 0. If `options:useprivmsg` was enabled load the `ns_set_message` module ([example](https://github.com/anope/anope/blob/2.1.10/data/nickserv.example.conf#L578-L591)).
 
@@ -101,7 +104,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If enabled remove `{ssl_openssl}:sslv3` (now always disabled).
 
-0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sasl`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, `ssl_openssl`, `xmlrpc`, and `xmlrpc_main` modules.
+0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sasl`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, and `ssl_openssl` modules.
 
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
 
@@ -110,6 +113,10 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. If enabled update `{ssl_openssl}:cert` and `{ssl_openssl}:key` to be relative to the config directory.
 
 0. If enable replace `{webcpanel}:template` with `{webcpanel}:template_dir` ([example](https://github.com/anope/anope/blob/2.1.4/data/modules.example.conf#L777-L781)).
+
+0. If enabled replace the `m_xmlrpc` module with the `xmlrpc` extra module or migrate to the `jsonrpc` module ([example](https://github.com/anope/anope/blob/2.1.12/data/modules.example.conf#L788-L818)).
+
+0. If enabled replace the `m_xmlrpc_main` module with the `rpc_data` and `rpc_main` modules ([example](https://github.com/anope/anope/blob/2.1.12/data/modules.example.conf#L820-L842)).
 
 #### operserv.conf
 
