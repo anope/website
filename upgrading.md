@@ -11,6 +11,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using the `db_sql` or `db_sql_live` modules it is recommended that on 2.0 you load `db_flatfile` and export your database to a file and re-import on 2.1 to update the schema of your database.
 
+0. The syntax for using defines has changed. Replace all usages of `services.host` with `${services.host}` and do the same for any defines you have added.
+
 #### services.conf
 
 0. Rename `services.conf` to `anope.conf`.
@@ -30,6 +32,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Move the `enc_md5`, `enc_none`, `enc_sha1`, and `enc_sha256` modules to be secondary encryption modules and add `enc_argon2`, `enc_bcrypt`, or `enc_sha2` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L1228-L1345)).
 
 0. Replace the `nickserv/access` privilege in operator accounts with the `nickserv/cert` privilege.
+
+0. Replace the `nickserv/saset/kill` privilege in operator accounts with the `nickserv/saset/protect` privilege.
 
 0. Add the `global/queue` and `global/server` privileges to operator accounts with the `global/global` privilege.
 
@@ -81,6 +85,12 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Remove the `ns_status` module and `nickserv/status` command.
 
+0. If the `killprotect` option is set in `{nickserv}:defaults` replace it with `protect` and set `{nickserv}:defaultprotect` to the value of `{nickserv}:kill`.
+
+0. If the `kill_quick` option is set in `{nickserv}:defaults` replace it with `protect` and set `{nickserv}:defaultprotect` to the value of `{nickserv}:killquick`.
+
+0. If the `kill_immed` option is set in `{nickserv}:defaults` replace it with `protect` and set `{nickserv}:defaultprotect` to `0s`.
+
 0. Remove the `ns_secure` option from `{nickserv}:defaults`.
 
 0. Rename `{nickserv}:passlen` to `{nickserv}:maxpasslen`.
@@ -89,12 +99,11 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Replace `options:strictpasswords` with `{nickserv}:minpasslen` ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L212-L217)).
 
-0. Load the `ns_set_kill` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L557-L574)).
-
 0. Load the `ns_set_keepmodes` module ([example](https://github.com/anope/anope/blob/2.1.12/data/nickserv.example.conf#L557-L576)).
 
-
 0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L579-L588)).
+
+0. Load the `ns_set_protect` module ([example](https://github.com/anope/anope/blob/2.1.13/data/nickserv.example.conf#L653-L667)).
 
 0. If `options:useprivmsg` was enabled load the `ns_set_message` module ([example](https://github.com/anope/anope/blob/2.1.10/data/nickserv.example.conf#L578-L591)).
 
@@ -104,9 +113,11 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If enabled remove `{ssl_openssl}:sslv3` (now always disabled).
 
-0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sasl`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, and `ssl_openssl` modules.
+0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, and `ssl_openssl` modules.
 
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
+
+0. If enabled replace the `m_sasl` module with the `ns_sasl` module.
 
 0. If enabled update `{ssl_gnutls}:cert`, `{ssl_gnutls}:dhparams`, and `{ssl_gnutls}:key` to be relative to the config directory.
 
