@@ -127,7 +127,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If enabled replace the `m_xmlrpc` module with the `xmlrpc` extra module or migrate to the `jsonrpc` module ([example](https://github.com/anope/anope/blob/2.1.12/data/modules.example.conf#L788-L818)).
 
-0. If enabled replace the `m_xmlrpc_main` module with the `rpc_data` and `rpc_main` modules ([example](https://github.com/anope/anope/blob/2.1.12/data/modules.example.conf#L820-L842)).
+0. If enabled replace the `m_xmlrpc_main` module with the `rpc_data`, `rpc_main`, and `rpc_message` modules ([example](https://github.com/anope/anope/blob/2.1.13/data/modules.example.conf#L824-L860)).
 
 #### operserv.conf
 
