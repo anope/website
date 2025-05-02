@@ -29,7 +29,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using the `unreal` protocol module then upgrade your IRCd and replace it with the `unrealircd` module.
 
-0. Move the `enc_md5`, `enc_none`, `enc_sha1`, and `enc_sha256` modules to be secondary encryption modules and add `enc_argon2`, `enc_bcrypt`, or `enc_sha2` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L1228-L1345)).
+0. Move the `enc_md5`, `enc_none`, `enc_sha1`, and `enc_sha256` modules to be secondary encryption modules and add `enc_argon2`, `enc_bcrypt`, or `enc_sha2` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.14/data/anope.example.conf#L1270-L1387)).
 
 0. Replace the `nickserv/access` privilege in operator accounts with the `nickserv/cert` privilege.
 
@@ -41,7 +41,9 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Update `serverinfo:pid` to be relative to the data directory.
 
-0. If you are using email then add the `i` flag to the sendmail command ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
+0. If you are using email then add the `i` flag to the sendmail command in `mail:sendmail` ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
+
+0. If you are using email then update the template variables to the new syntax in `mail:emailchange_message`, `mail:emailchange_subject`, `mail:memo_message`, `mail:memo_subject`, `mail:registration_message`, `mail:registration_subject,`, `mail:reset_message`, and `mail:reset_subject` ([example](https://github.com/anope/anope/blob/2.1.14/data/anope.example.conf#L984-L1057)).
 
 0. Replace `options:usestrictprivmsg` with `options:servicealias` ([example](https://github.com/anope/anope/blob/2.1.10/data/anope.example.conf#L432-L437)).
 
@@ -60,6 +62,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
 
 0. Remove the `cs_secure` option from `{chanserv}:defaults`.
+
+0. Update the template variables to the new syntax in `{chanserv}:signkickformat` ([example](https://github.com/anope/anope/blob/2.1.14/data/chanserv.example.conf#L164-L169)).
 
 0. Add the `misc_numeric` field to the `SET URL` command of the `ns_set_misc` module ([example](https://github.com/anope/anope/blob/2.1.11/data/chanserv.example.conf#L1259])).
 
@@ -84,6 +88,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Remove the `ns_getpass` module and `nickserv/getpass` command.
 
 0. Remove the `ns_status` module and `nickserv/status` command.
+
+0. Update the template variables to the new syntax in `{nickserv}:unregistered_notice` ([example](https://github.com/anope/anope/blob/2.1.14/data/nickserv.example.conf#L95-L100)).
 
 0. If the `killprotect` option is set in `{nickserv}:defaults` replace it with `protect` and set `{nickserv}:defaultprotect` to the value of `{nickserv}:kill`.
 
@@ -115,6 +121,14 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, and `ssl_openssl` modules.
 
+0. If enabled update the template variables to the new syntax in `{dnsbl}:blacklist:reason` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L121-L130)).
+
+0. If enabled update the template variables to the new syntax in `{ldap_authentication}:search_filter` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L271-L276)).
+
+0. If enabled update the template variables to the new syntax in `{ldap_oper}:binddn and {ldap_oper}:filter` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L316-L355)).
+
+0. If enabled update the template variables to the new syntax in `{proxyscan}:proxyscan:reason` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L551-L557)).
+
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
 
 0. If enabled replace the `m_sasl` module with the `ns_sasl` module.
@@ -123,7 +137,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If enabled update `{ssl_openssl}:cert` and `{ssl_openssl}:key` to be relative to the config directory.
 
-0. If enable replace `{webcpanel}:template` with `{webcpanel}:template_dir` ([example](https://github.com/anope/anope/blob/2.1.4/data/modules.example.conf#L777-L781)).
+0. If enabled replace `{webcpanel}:template` with `{webcpanel}:template_dir` ([example](https://github.com/anope/anope/blob/2.1.4/data/modules.example.conf#L777-L781)).
 
 0. If enabled replace the `m_xmlrpc` module with the `xmlrpc` extra module or migrate to the `jsonrpc` module ([example](https://github.com/anope/anope/blob/2.1.12/data/modules.example.conf#L788-L818)).
 
@@ -132,6 +146,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 #### operserv.conf
 
 0. Remove the `os_oline` module and `operserv/oline` command.
+
+0. Update the template variables to the new syntax in `{os_session}:sessionlimitexceeded` ([example](https://github.com/anope/anope/blob/2.1.14/data/operserv.example.conf#L583-L590)).
 
 #### stats.standalone.conf
 
