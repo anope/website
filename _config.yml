@@ -45,7 +45,7 @@ releases:
     windows: https://github.com/anope/anope/releases/download/2.1.14/anope-2.1.14.exe
   stable:
     version: 2.0.17
-    date: 2024-12-08
-    news: /news/2024/anope-2017-release.html
-    source: https://github.com/anope/anope/archive/refs/tags/2.0.17.tar.gz
-    windows: https://github.com/anope/anope/releases/download/2.0.17/anope-2.0.17.exe
+    date: 2025-05-08
+    news: /news/2025/anope-2018-release.html
+    source: https://github.com/anope/anope/archive/refs/tags/2.0.18.tar.gz
+    windows: https://github.com/anope/anope/releases/download/2.0.18/anope-2.0.18.exe
