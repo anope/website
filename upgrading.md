@@ -19,6 +19,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Replace `uplink:ipv6` with `uplink:protocol` ([example](https://github.com/anope/anope/blob/2.1.0/data/anope.example.conf#L172-L176)).
 
+0. If you are using the `bahamut` protocol module then migrate to a different IRC server (we recommend [InspIRCd](https://www.inspircd.org/)) and load the appropriate module.
+
 0. If you are using the `charybdis` protocol module then migrate to [Solanum](https://github.com/solanum-ircd/solanum) and replace it with the `solanum` module.
 
 0. If you are using the `inspircd3` protocol module then replace it with the `inspircd` module.
@@ -53,6 +55,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Add a description to the `GREET` privilege ([example](https://github.com/anope/anope/blob/2.1.1/data/botserv.example.conf#L326)).
 
+0. Rename `{botserv}:gecos` to `{botserv}:real`.
+
 #### chanserv.conf
 
 0. Rename the `FANTASIA` privilege to `FANTASY` ([example](https://github.com/anope/anope/blob/2.1.7/data/chanserv.example.conf#L393-L408)).
@@ -60,6 +64,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Add a description to the `ACCESS_CHANGE`, `ACCESS_LIST`, `AKICK`, `ASSIGN`, `AUTOHALFOP`, `AUTOOP`, `AUTOOWNER`, `AUTOPROTECT`, `AUTOVOICE`, `BADWORDS`, `BAN`, `FANTASY`, `FOUNDER`, `GETKEY`, `HALFOP`, `HALFOPME`, `INFO`, `INVITE`, `KICK`, `MEMO`, `MODE`, `NOKICK`, `OP`, `OPME`, `OWNER`, `OWNERME`, `PROTECT`, `PROTECTME`, `SAY`, `SET`, `SIGNKICK`, `TOPIC`, `UNBAN`, `UNBANME`, `VOICE`, and `VOICEME` privileges ([example](https://github.com/anope/anope/blob/2.1.11/data/chanserv.example.conf#L217-L850)).
 
 0. Add the `UNBANME` privilege for `chanserv/unban` ([example](https://github.com/anope/anope/blob/2.1.1/data/chanserv.example.conf#L791-L806)).
+
+0. Rename `{chanserv}:gecos` to `{chanserv}:real`.
 
 0. Remove the `cs_secure` option from `{chanserv}:defaults`.
 
@@ -73,19 +79,35 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Add the `gl_queue` and `gl_server` modules and their commands ([example](https://github.com/anope/anope/blob/2.1.4/data/global.example.conf#L117-L141)).
 
+0. Rename `{global}:gecos` to `{global}:real`.
+
 #### chanstats.conf
 
 0. Remove the `m_` prefix from the `chanstats` module.
 
+0. If you have {chanstats}:cs_def_chanstats set then remove it and add `CS_STATS` to {chanserv}:defaults.
+
+0. If you have {chanstats}:ns_def_chanstats set then remove it and add `NS_STATS` to {nickserv}:defaults.
+
+#### hostserv.conf
+
+0. Rename `{hostserv}:gecos` to `{hostserv}:real`.
+
 #### nickserv.conf
+
+0. Rename `{nickserv}:gecos` to `{nickserv}:real`.
 
 0. Add the `nickserv/set/neverop` and `nickserv/saset/neverop` commands ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L581-L582])).
 
 0. Remove the `nickserv/set/secure` and `nickserv/saset/secure` commands.
 
 0. Remove the `ns_access` module and `nickserv/access` command.
-.
+
+0. Replace the `ns_getemail` module with the `ns_email` module ([example](https://github.com/anope/anope/blob/2.1.15/data/nickserv.example.conf#L348-L379)).
+
 0. Remove the `ns_getpass` module and `nickserv/getpass` command.
+
+0. If enabled replace the `ns_maxemail` module with the `maxemails` setting of the `ns_email` module ([example](https://github.com/anope/anope/blob/2.1.15/data/nickserv.example.conf#L348-L379)).
 
 0. Remove the `ns_status` module and `nickserv/status` command.
 
@@ -141,9 +163,15 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If enabled replace the `m_xmlrpc` module with the `xmlrpc` extra module or migrate to the `jsonrpc` module ([example](https://github.com/anope/anope/blob/2.1.12/data/modules.example.conf#L788-L818)).
 
-0. If enabled replace the `m_xmlrpc_main` module with the `rpc_data`, `rpc_main`, and `rpc_message` modules ([example](https://github.com/anope/anope/blob/2.1.13/data/modules.example.conf#L824-L860)).
+0. If enabled replace the `m_xmlrpc_main` module with the `rpc_data`, `rpc_message`, and `rpc_user` modules ([example](https://github.com/anope/anope/blob/2.1.15/data/modules.example.conf#L909-L961)).
+
+#### memoserv.conf
+
+0. Rename `{memoserv}:gecos` to `{memoserv}:real`.
 
 #### operserv.conf
+
+0. Rename `{operserv}:gecos` to `{operserv}:real`.
 
 0. Remove the `os_oline` module and `operserv/oline` command.
 
