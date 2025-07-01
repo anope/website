@@ -13,6 +13,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. The syntax for using defines has changed. Replace all usages of `services.host` with `${services.host}` and do the same for any defines you have added.
 
+0. IRC2SQL has been replaced with JSON-RPC. Remove stats.standalone.conf and irc2sql.conf.
+
 #### services.conf
 
 0. Rename `services.conf` to `anope.conf`.
@@ -35,6 +37,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Replace the `nickserv/access` privilege in operator accounts with the `nickserv/cert` privilege.
 
+0. Replace the `nickserv/confirm` privilege in operator accounts with the `nickserv/confirm/register` and `nickserv/confirm/email` privileges.
+
 0. Replace the `nickserv/saset/kill` privilege in operator accounts with the `nickserv/saset/protect` privilege.
 
 0. Add the `global/queue` and `global/server` privileges to operator accounts with the `global/global` privilege.
@@ -46,6 +50,12 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. If you are using email then add the `i` flag to the sendmail command in `mail:sendmail` ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
 
 0. If you are using email then update the template variables to the new syntax in `mail:emailchange_message`, `mail:emailchange_subject`, `mail:memo_message`, `mail:memo_subject`, `mail:registration_message`, `mail:registration_subject,`, `mail:reset_message`, and `mail:reset_subject` ([example](https://github.com/anope/anope/blob/2.1.14/data/anope.example.conf#L984-L1057)).
+
+0. If you are using email then update the command in `mail:emailchange_message` from `CONFIRM` to `CONFIRM EMAIL` ([example](https://github.com/anope/anope/blob/2.1.16/data/anope.example.conf#L1032)).
+
+0. If you are using email then update the command in `mail:registration_message` from `CONFIRM` to `CONFIRM REGISTER` ([example](https://github.com/anope/anope/blob/2.1.16/data/anope.example.conf#L994)).
+
+0. If you are using email then update the command in `mail:reset_message` from `CONFIRM` to `CONFIRM RESETPASS` ([example](https://github.com/anope/anope/blob/2.1.16/data/anope.example.conf#L1012)).
 
 0. Replace `options:usestrictprivmsg` with `options:servicealias` ([example](https://github.com/anope/anope/blob/2.1.10/data/anope.example.conf#L432-L437)).
 
@@ -103,11 +113,19 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Remove the `ns_access` module and `nickserv/access` command.
 
+0. Load the ns_confirm module ([example](https://github.com/anope/anope/blob/2.1.16/data/nickserv.example.conf#L339-L347)).
+
 0. Replace the `ns_getemail` module with the `ns_email` module ([example](https://github.com/anope/anope/blob/2.1.15/data/nickserv.example.conf#L348-L379)).
 
 0. Remove the `ns_getpass` module and `nickserv/getpass` command.
 
 0. If enabled replace the `ns_maxemail` module with the `maxemails` setting of the `ns_email` module ([example](https://github.com/anope/anope/blob/2.1.15/data/nickserv.example.conf#L348-L379)).
+
+0. Add the new `CONFIRM EMAIL` command ([example](https://github.com/anope/anope/blob/2.1.16/data/nickserv.example.conf#L394)).
+
+0. Replace the `ns_register` `CONFIRM` command with the new `CONFIRM REGISTER` command ([example](https://github.com/anope/anope/blob/2.1.16/data/nickserv.example.conf#L565)).
+
+0. Add the new `CONFIRM RESETPASS` command ([example](https://github.com/anope/anope/blob/2.1.16/data/nickserv.example.conf#L565)).
 
 0. Remove the `ns_status` module and `nickserv/status` command.
 
@@ -140,7 +158,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. If enabled add `{ssl_openssl}:tlsv10`, `{ssl_openssl}:tlsv11`, and `{ssl_openssl}:tlsv12` ([example](https://github.com/anope/anope/blob/2.1.2/data/modules.example.conf#L632-L639)).
 
 0. If enabled remove `{ssl_openssl}:sslv3` (now always disabled).
-
+Load the
 0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, and `ssl_openssl` modules.
 
 0. If enabled update the template variables to the new syntax in `{dnsbl}:blacklist:reason` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L121-L130)).
@@ -176,7 +194,3 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. Remove the `os_oline` module and `operserv/oline` command.
 
 0. Update the template variables to the new syntax in `{os_session}:sessionlimitexceeded` ([example](https://github.com/anope/anope/blob/2.1.14/data/operserv.example.conf#L583-L590)).
-
-#### stats.standalone.conf
-
-0. Remove the `m_` prefix from the `mysql` module.
