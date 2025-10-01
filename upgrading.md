@@ -33,7 +33,11 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using the `unreal` protocol module then upgrade your IRCd and replace it with the `unrealircd` module.
 
+0. If you are using `db_flatfile` (or have exported to flatfile as part of the upgrade progress) load either `db_json` or `db_sql` beforeW `db_flatfile` to import your database.
+
 0. Move the `enc_md5`, `enc_none`, `enc_sha1`, and `enc_sha256` modules to be secondary encryption modules and add `enc_argon2`, `enc_bcrypt`, or `enc_sha2` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.14/data/anope.example.conf#L1270-L1387)).
+
+0. If you are using the `enc_old` module then remove it from your config.
 
 0. Replace the `nickserv/access` privilege in operator accounts with the `nickserv/cert` privilege.
 
@@ -149,7 +153,11 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Load the `ns_set_language` module ([example](https://github.com/anope/anope/blob/2.1.11/data/nickserv.example.conf#L579-L588)).
 
-0. Load the `ns_set_protect` module ([example](https://github.com/anope/anope/blob/2.1.13/data/nickserv.example.conf#L653-L667)).
+0. Load the `ns_set_layout` module ([example](https://github.com/anope/anope/blob/2.1.18/data/nickserv.example.conf#L704-L713)).
+
+0. Load the `ns_set_op` module ([example](https://github.com/anope/anope/blob/2.1.18/data/nickserv.example.conf#L746-L763)).
+
+0. Load the `ns_set_protect` module ([example](https://github.com/anope/anope/blob/2.1.18/data/nickserv.example.conf#L765-L778)).
 
 0. If `options:useprivmsg` was enabled load the `ns_set_message` module ([example](https://github.com/anope/anope/blob/2.1.10/data/nickserv.example.conf#L578-L591)).
 
@@ -171,7 +179,7 @@ Load the
 
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
 
-0. If enabled replace the `m_sasl` module with the `ns_sasl` module.
+0. If enabled replace the `m_sasl` module with the `ns_sasl`, `ns_sasl_anonymous`, `ns_sasl_external`, and `ns_sasl_plain` modules ([example](https://github.com/anope/anope/blob/2.1.18/data/nickserv.example.conf#L636-L652)).
 
 0. If enabled update `{ssl_gnutls}:cert`, `{ssl_gnutls}:dhparams`, and `{ssl_gnutls}:key` to be relative to the config directory.
 
