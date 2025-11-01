@@ -33,7 +33,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. If you are using the `unreal` protocol module then upgrade your IRCd and replace it with the `unrealircd` module.
 
-0. If you are using `db_flatfile` (or have exported to flatfile as part of the upgrade progress) load either `db_json` or `db_sql` beforeW `db_flatfile` to import your database.
+0. If you are using `db_flatfile` (or have exported to flatfile as part of the upgrade progress) load either `db_json` or `db_sql` after `db_flatfile` to import your database. Once Anope has started and written a JSON or SQL database unload `db_flatfile`.
 
 0. Move the `enc_md5`, `enc_none`, `enc_sha1`, and `enc_sha256` modules to be secondary encryption modules and add `enc_argon2`, `enc_bcrypt`, or `enc_sha2` as a new primary encryption module ([example](https://github.com/anope/anope/blob/2.1.14/data/anope.example.conf#L1270-L1387)).
 
