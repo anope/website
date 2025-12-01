@@ -38,11 +38,11 @@ plugins:
 
 releases:
   devel:
-    version: 2.1.19
-    date: 2025-11-01
-    news: /news/2025/anope-2119-release.html
-    source: https://github.com/anope/anope/archive/refs/tags/2.1.19.tar.gz
-    windows: https://github.com/anope/anope/releases/download/2.1.19/anope-2.1.19.exe
+    version: 2.1.20
+    date: 2025-12-01
+    news: /news/2025/anope-2120-release.html
+    source: https://github.com/anope/anope/archive/refs/tags/2.1.20.tar.gz
+    windows: https://github.com/anope/anope/releases/download/2.1.20/anope-2.1.20.exe
   stable:
     version: 2.0.18
     date: 2025-05-08
