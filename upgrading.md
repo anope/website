@@ -71,6 +71,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Rename `{botserv}:gecos` to `{botserv}:real`.
 
+0. If you have `{fantasy}:fantasycharacter` set then replace it with `{fantasy}:prefix` ([example](https://github.com/anope/anope/blob/2.1.21/data/botserv.example.conf#L354-L361)).
+
 #### chanserv.conf
 
 0. Rename the `FANTASIA` privilege to `FANTASY` ([example](https://github.com/anope/anope/blob/2.1.7/data/chanserv.example.conf#L393-L408)).
