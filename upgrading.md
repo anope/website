@@ -168,7 +168,7 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. If enabled add `{ssl_openssl}:tlsv10`, `{ssl_openssl}:tlsv11`, and `{ssl_openssl}:tlsv12` ([example](https://github.com/anope/anope/blob/2.1.2/data/modules.example.conf#L632-L639)).
 
 0. If enabled remove `{ssl_openssl}:sslv3` (now always disabled).
-Load the
+
 0. If enabled remove the the `m_` prefix from the `dns`, `dnsbl`, `helpchan`, `httpd`, `ldap`, `ldap_oper`, `mysql`, `proxyscan`, `redis`, `regex_pcre2`, `regex_posix`, `regex_stdlib`, `regex_tre`, `rewrite`, `sql_log`, `sql_oper`, `sqlite`, `ssl_gnutls`, and `ssl_openssl` modules.
 
 0. If enabled update the template variables to the new syntax in `{dnsbl}:blacklist:reason` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L121-L130)).
