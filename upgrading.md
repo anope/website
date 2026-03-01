@@ -113,13 +113,15 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Rename `{nickserv}:gecos` to `{nickserv}:real`.
 
+0. Add the `nickserv/set/autologin` and `nickserv/saset/autologin` commands ([example](https://github.com/anope/anope/blob/2.1.22/data/nickserv.example.conf#L339-L340)).
+
 0. Add the `nickserv/set/neverop` and `nickserv/saset/neverop` commands ([example](https://github.com/anope/anope/blob/2.1.0/data/nickserv.example.conf#L581-L582])).
 
 0. Remove the `nickserv/set/secure` and `nickserv/saset/secure` commands.
 
 0. Remove the `ns_access` module and `nickserv/access` command.
 
-0. Load the ns_confirm module ([example](https://github.com/anope/anope/blob/2.1.16/data/nickserv.example.conf#L339-L347)).
+0. Load the `ns_confirm` module ([example](https://github.com/anope/anope/blob/2.1.16/data/nickserv.example.conf#L339-L347)).
 
 0. Replace the `ns_getemail` module with the `ns_email` module ([example](https://github.com/anope/anope/blob/2.1.15/data/nickserv.example.conf#L348-L379)).
 
