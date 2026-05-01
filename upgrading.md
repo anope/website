@@ -5,11 +5,15 @@ layout: simple
 
 Upgrading from 2.0 to 2.1 can be done by:
 
+#### Before upgrading
+
+0. If you are using the `db_redis` module you must load `db_flatfile` on 2.0 and export your database to a file as this module has been removed in 2.1.
+
+0. If you are using the `db_sql` or `db_sql_live` modules it is STRONGLY RECOMMENDED that on 2.0 you load `db_flatfile` and export your database to a file and re-import on 2.1 to update the schema of your database.
+
 #### General
 
 0. Update any scripts you have that execute `services` to execute `anope` instead.
-
-0. If you are using the `db_sql` or `db_sql_live` modules it is recommended that on 2.0 you load `db_flatfile` and export your database to a file and re-import on 2.1 to update the schema of your database.
 
 0. The syntax for using defines has changed. Replace all usages of `services.host` with `${services.host}` and do the same for any defines you have added.
 
@@ -182,6 +186,8 @@ Upgrading from 2.0 to 2.1 can be done by:
 0. If enabled update the template variables to the new syntax in `{proxyscan}:proxyscan:reason` ([example](https://github.com/anope/anope/blob/2.1.14/data/modules.example.conf#L551-L557)).
 
 0. If enabled replace the `m_regex_pcre` module with the `regex_pcre2` module.
+
+0. If enabled remove the `m_redis` module.
 
 0. If enabled replace the `m_sasl` module with the `ns_sasl`, `ns_sasl_anonymous`, `ns_sasl_external`, and `ns_sasl_plain` modules ([example](https://github.com/anope/anope/blob/2.1.18/data/nickserv.example.conf#L636-L652)).
 
