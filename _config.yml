@@ -39,13 +39,14 @@ plugins:
 releases:
   devel:
     version: 2.1.24
-    date: 2026-05-01
-    news: /news/2026/anope-2124-release.html
-    source: https://github.com/anope/anope/archive/refs/tags/2.1.24.tar.gz
-    windows: https://github.com/anope/anope/releases/download/2.1.24/anope-2.1.24.exe
+    date: 2026-07-10
+    news: /news/2026/anope-2125-release.html
+    source: https://github.com/anope/anope/archive/refs/tags/2.1.25.tar.gz
+    windows: https://github.com/anope/anope/releases/download/2.1.25/anope-2.1.25.exe
   stable:
     version: 2.0.20
     date: 2026-05-26
     news: /news/2026/anope-2020-release.html
     source: https://github.com/anope/anope/archive/refs/tags/2.0.20.tar.gz
     windows: https://github.com/anope/anope/releases/download/2.0.20/anope-2.0.20.exe
+inspircd
