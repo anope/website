@@ -55,17 +55,18 @@ Upgrading from 2.0 to 2.1 can be done by:
 
 0. Update `serverinfo:pid` to be relative to the data directory.
 
-0. If you are using email then add the `i` flag to the sendmail command in `mail:sendmail` ([example](https://github.com/anope/anope/blob/2.1.4/data/anope.example.conf#L953)).
 
-0. If you are using email then update the template variables to the new syntax in `mail:emailchange_message`, `mail:emailchange_subject`, `mail:memo_message`, `mail:memo_subject`, `mail:registration_message`, `mail:registration_subject,`, `mail:reset_message`, and `mail:reset_subject` ([example](https://github.com/anope/anope/blob/2.1.14/data/anope.example.conf#L984-L1057)).
+0. If you are using email then:
 
-0. If you are using email then update the command in `mail:emailchange_message` from `CONFIRM` to `CONFIRM EMAIL` ([example](https://github.com/anope/anope/blob/2.1.16/data/anope.example.conf#L1032)).
+	* Add the `i` flag to the sendmail command in `mail:sendmailpath` or comment it out to use the default ([example](https://github.com/anope/anope/blob/2.1.26/data/anope.example.conf#L949)).
 
-0. If you are using email then update the command in `mail:registration_message` from `CONFIRM` to `CONFIRM REGISTER` ([example](https://github.com/anope/anope/blob/2.1.16/data/anope.example.conf#L994)).
+	* Replace `mail:emailchange_message` and `mail:emailchange_subject` with the new `email_change` block ([example](https://github.com/anope/anope/blob/2.1.26/data/anope.example.conf#L1092-L1139)). If you are using a custom message you will also need to move it to a file, update the template variables to the new syntax, and change the command name from `CONFIRM` to `CONFIRM EMAIL`.
 
-0. If you are using email then update the command in `mail:reset_message` from `CONFIRM` to `CONFIRM RESETPASS` ([example](https://github.com/anope/anope/blob/2.1.16/data/anope.example.conf#L1012)).
+	* Replace `mail:memo_message` and `mail:memo_subject` with the new `memo` block ([example](https://github.com/anope/anope/blob/2.1.26/data/anope.example.conf#L1141-L1187)). If you are using a custom message you will also need to move it to a file and update the template variables to the new syntax.
 
-0. Replace `options:usestrictprivmsg` with `options:servicealias` ([example](https://github.com/anope/anope/blob/2.1.10/data/anope.example.conf#L432-L437)).
+	* Replace `mail:registration_message` and `mail:registration_subject` with the new `registration` block ([example](https://github.com/anope/anope/blob/2.1.26/data/anope.example.conf#L998-L1043)). If you are using a custom message you will also need to move it to a file, update the template variables to the new syntax, and change the command name from `CONFIRM` to `CONFIRM REGISTER`.
+
+	* Replace `mail:reset_message` and `mail:reset_subject` with the new `password_reset` block ([example](https://github.com/anope/anope/blob/2.1.26/data/anope.example.conf#L1045-L1090)). If you are using a custom message you will also need to move it to a file, update the template variables to the new syntax, and change the command name from `CONFIRM` to `CONFIRM RESETPASS`.
 
 0. Update `options:languages` to no longer include `ca_ES.UTF-8`, `hu_HU.UTF-8`, and `ru_RU.UTF-8`.
 
