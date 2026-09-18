@@ -25,7 +25,7 @@ navigation:
     - Docker Hub: https://hub.docker.com/r/anope/anope
       GitHub: https://github.com/anope/anope
 
-    - Bluesky: https://bsky.app/profile/anope.bsky.social
+    - Bluesky: https://bsky.app/profile/anope.org
       Mastodon: https://fosstodon.org/@anope
       RSS: /feed.xml
 
